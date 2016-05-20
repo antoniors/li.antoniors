@@ -1,6 +1,6 @@
 /*#page-container,*/
-#sidebar {
-  background-color: @brand-primary;
+.navbar-default {
+  background-color : #ffffff;
 }
 
 #sidebar-brand {
@@ -54,9 +54,26 @@ a.sidebar-title:focus {
 .sidebar-nav {
   list-style: none;
   margin: 0;
-  margin-left: 30px;
   padding: 10px 0 0;
+
+  .notification {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  span.info {
+    margin: 18px 0px;
+    line-height: 36px;
+    width: 36px;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
 }
+
+
 /*
 .sidebar-separator {
   padding: 5px 0;
@@ -64,9 +81,8 @@ a.sidebar-title:focus {
   text-align: center;
 }
 */
-.sidebar-separator i {
-  opacity: .1;
-}
+
+
 /*
 #sidebar-toggle-mini {
   display: none;
@@ -74,20 +90,17 @@ a.sidebar-title:focus {
 
 */
 .sidebar-logo {
-  height: 75px;
-  background: url(../images/logo-light.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 55px;
+
 }
 .sidebar-nav a {
   display: block;
   color: white;
+  font-size: 14px;
   padding: 0 10px;
   min-height: 40px;
-  line-height: 40px;
-  overflow: hidden;
+  line-height: 38px;
   position: relative;
   padding: 17px 0px;
 }
@@ -103,8 +116,8 @@ a.sidebar-title:focus {
 
 .sidebar-nav a:hover {
   /*color: #454e59;*/
-  background: rgba(167, 156, 101, .75);
-  text-decoration: none;
+  /*background: rgba(167, 156, 101, .75);*/
+  color: @brand-info;
 }
 /*
 .sidebar-nav a.open,
@@ -119,7 +132,8 @@ a.sidebar-title:focus {
 }
 */
 .sidebar-nav a > .sidebar-nav-icon {
-  margin-right: 10px;
+  margin-right: 25px;
+  font-size: 25px;
 }
 /*
 
@@ -198,4 +212,16 @@ a.sidebar-title:focus {
 .sidebar-nav ul .open + ul {
   background-color: #454e59;
 }*/
+#page-container.sidebar-visible-xs #sidebar {
+  left: 0;
+}
 
+#page-container.sidebar-visible-xs #main-container {
+  margin-left: 225px;
+  margin-right: -225px;
+}
+#page-container.sidebar-visible-xs header.navbar-fixed-top,
+#page-container.sidebar-visible-xs header.navbar-fixed-bottom {
+  left: 225px;
+  right: -225px;
+}

@@ -1,7 +1,4 @@
 
-
-
-
 #sidebar,
 #main-container,
 header.navbar.navbar-fixed-top {
@@ -46,8 +43,6 @@ header.navbar.navbar-fixed-top {
   opacity: 0;
 }*/
 
-
-
 /* Sidebar + Static Layout */
 #sidebar {
   position: absolute;
@@ -71,13 +66,12 @@ header.navbar.navbar-fixed-top {
 #page-container.header-fixed-top #page-content {
   padding-top: 60px;
 }
+
 #page-container.header-fixed-top #sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
 }
-
-
 
 /*
 =================================================================
@@ -88,25 +82,18 @@ RESPONSIVE
 /* Small devices, Tablets (>767px) */
 @media screen and (min-width: 768px) {
 
-
-
-
-
 }
 
 /* Medium devices, Desktops (>991px) */
 @media screen and (min-width: 992px) {
 
-
-  #page-container.sidebar-visible-lg-mini #sidebar-toggle-full{
+  #page-container.sidebar-visible-lg-mini #sidebar-toggle-full {
     display: inline-block;
   }
 
   #page-container.sidebar-visible-lg-full #sidebar-toggle-full {
     display: none;
   }
-
-
 
   /* Layout Transitions */
   #sidebar {
@@ -120,20 +107,14 @@ RESPONSIVE
   }
 
   #main-container {
-    -webkit-transition: none;
-    transition: none;
+    padding-bottom: 50px;
   }
-
-
 
   /* Sidebar + Static Layout */
   #sidebar {
     width: 0;
     left: 0;
   }
-
-
-
 
   #page-container.sidebar-visible-lg-full #sidebar {
     width: 225px;
@@ -143,31 +124,20 @@ RESPONSIVE
     margin-left: 225px;
   }
 
-
-
-
-  #page-container.sidebar-visible-lg-full header.navbar-fixed-top{
+  #page-container.sidebar-visible-lg-full header.navbar-fixed-top {
     left: 225px;
   }
 
-
-
-
-
-
-
 }
-
-
 
 /*********************
 
 */
 
-
 body {
   background-color: #e2e4e7;
 }
+
 .text-default {
   color: @brand-default;
 }
@@ -180,7 +150,6 @@ body {
 LOGIN
 *****/
 
-
 .background-login {
   background: url(../images/background.png) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -188,10 +157,12 @@ LOGIN
   -o-background-size: cover;
   background-size: cover;
 }
+
 .login {
   margin-top: 15%;
-  background-color : #ffffff;
+  background-color: #ffffff;
 }
+
 .login-form {
 
   padding: 0px 30px 0px 30px;
@@ -209,6 +180,11 @@ LOGIN
 .login-logo {
   padding: 25px 0;
 }
+
+.section {
+  padding: 30px 30px;
+}
+
 .no-margin {
   margin-right: 0px !important;
   margin-left: 0px !important;
@@ -216,37 +192,178 @@ LOGIN
   margin-top: 0px !important;
 }
 
+.no-margin-b {
+  margin-bottom: 0px !important;
+}
+
+.no-margin-tb {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+.no-padding-tb {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.no-padding {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.no-padding-b {
+  padding-bottom: 0px !important;
+}
+
 .bg-muted {
   background-color: white
 
 }
 
-.container {
-  padding: 30px 30px;
-}
-
-
 .no-padding-lr {
-  padding-left: 0px;
-  padding-left: 0px;
-}
+   padding-left: 0px;
+   padding-right: 0px;
+ }
 
+.no-margin-lr {
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
 .pt-50 {
-  padding-top: 50px!important;
+  padding-top: 50px !important;
 }
 
-
-
-
-.notification {
-  padding: 0px !important;
+#page-content .notification {
+  /*padding: 0px !important;*/
+  .no-margin-lr;
   .icon {
     height: 100%;
     vertical-align: middle;
+    left: 0;
+    float: left;
+    .icon-container {
+      position: relative;
+      width: 100%;
+      padding-top: 60%;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      top: 100px;
+    }
+  }
+  .message-section {
+    margin: 0px 0px;
+    background-color: #e2e4e7;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .message {
     margin: 20px 0px;
-    background-color: #e2e4e7;
+    background-color: #ffffff;
+    padding: 25px;
+
   }
+  .no-padding;
+}
+
+.size-lg {
+  font-size: 45px;
+  @media (max-width: @screen-xs-max) {
+
+      font-size: 20px !important;
+      font-weight: bold;
+
+
+  }
+}
+
+
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
+
+@media (min-width: @screen-lg-min) {
+
+}
+
+.size-lg {
+  font-size: 45px;
+
+}
+
+.morris-hover {
+  background: @brand-primary !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  border: none !important;
+  border-radius: @border-radius-large !important;
+  font-weight: bold;
+  .morris-hover-row-label {
+    color: #ffffff;
+  }
+  .morris-hover-point {
+    color: @brand-default;
+  }
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  color: #fff;
+  .bg-variant(@brand-primary) !important;
+}
+
+.bg-success {
+  .bg-variant(@state-success-bg) !important;
+}
+
+.bg-info {
+  .bg-variant(@state-info-bg) !important;
+}
+
+.bg-warning {
+  .bg-variant(@state-warning-bg) !important;
+}
+
+.bg-danger {
+  .bg-variant(@state-danger-bg) !important;
+}
+
+.title-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .title {
+    font-size: 25px;
+  }
+  .breadcrumb {
+    padding: 15px;
+  }
+
+  .no-padding-lr;
+}
+
+.title-section-main {
+  .title-section;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 35px;
+  padding-top: 35px;
+}
+
+.separator-tb {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
