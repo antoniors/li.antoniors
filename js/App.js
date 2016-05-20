@@ -82,7 +82,6 @@ if(mq.matches) {
 
 mq.addListener(function(changed) {
     if(changed.matches) {
-        alert("asdasd");
         $('#sidebar-scroll').slimScroll({destroy: true});
         $('#sidebar-scroll').slimScroll({
             height: $('.sidebar-nav').outerHeight() + 100,
