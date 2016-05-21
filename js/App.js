@@ -95,3 +95,21 @@ mq.addListener(function(changed) {
         // the width of browser is less then 700px
     }
 });
+
+var menuLinks = $('.sidebar-nav-menu');
+menuLinks.on('click', function (e) {
+    var link = $(this);
+
+    // If we are in mini sidebar mode
+
+    if (link.hasClass('open')) {
+        link.removeClass('open');
+    }
+    else {
+        $('#sidebar .sidebar-nav-menu.open').removeClass('open');
+        link.addClass('open');
+    }
+
+
+    return false;
+});
